@@ -59,3 +59,20 @@ for i in range(0,len(Statue)-1):
     if Statue[i+1]-Statue[i]>1:
         m+=Statue[i+1]-Statue[i]-1
 print(m)
+##########################################################
+#Q8. Matrix elemet Sum (only sum which does not have 0 above it
+#https://www.youtube.com/watch?v=BB1RNQA78cg
+Matrix=[[0,1,1,2],
+        [0,5,0,0],
+        [2,0,3,3]] #1+5+1+2=9
+sum=0
+for col in range(len(Matrix[0])):
+    for row in range(len(Matrix)):
+        if Matrix[row][col]==0:
+            break
+        elif row>0 and Matrix[row-1][col]==0:
+            break
+        else:
+            sum+=Matrix[row][col]
+print(sum)
+################################################################
