@@ -50,3 +50,12 @@ while j<len(N):
 print(p)
 #or 
 return max ([N[i]*N[i+1] for i in range(0,len(N)-1)])
+########################################################
+#Q4.Find missing consuctive numbers
+Statue=[6,2,3,8]# [2,3,4,5,6,7,8] 4 5 7 is missing
+Statue.sort()
+m=0
+for i in range(0,len(Statue)-1):
+    if Statue[i+1]-Statue[i]>1:
+        m+=Statue[i+1]-Statue[i]-1
+print(m)
