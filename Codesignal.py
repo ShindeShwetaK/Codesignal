@@ -59,6 +59,22 @@ for i in range(0,len(Statue)-1):
     if Statue[i+1]-Statue[i]>1:
         m+=Statue[i+1]-Statue[i]-1
 print(m)
+#########################################################
+#Q5. Find area of a Polygon
+return n*n + (n-1)*(n-1)
+########################################################
+#Q7.Almost Increaking array
+#[1,3,2,1]=False if we remove 1 number it should be a increasing [1,3,2]= True 3 removed then increasing
+def solution(seq):
+  for i in range(len(seq)):
+    new_sqe=seq[:i]+seq[i+1:]
+    incresing=True
+
+    for n in range(len(new_seq)-1):
+      if new_seq[n]>= new_seq[n-1]:
+        increasing=False
+        break
+  return increasing
 ##########################################################
 #Q8. Matrix elemet Sum (only sum which does not have 0 above it
 #https://www.youtube.com/watch?v=BB1RNQA78cg
